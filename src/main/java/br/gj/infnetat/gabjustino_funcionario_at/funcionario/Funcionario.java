@@ -12,6 +12,7 @@ public class Funcionario {
     private Long id;
     private String nome;
 
+    public Funcionario() {}
     public Funcionario(String nome) {
         this.nome = nome;
     }
