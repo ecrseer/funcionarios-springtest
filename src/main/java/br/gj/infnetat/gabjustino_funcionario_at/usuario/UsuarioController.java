@@ -1,10 +1,7 @@
 package br.gj.infnetat.gabjustino_funcionario_at.usuario;
 
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -20,5 +17,10 @@ public class UsuarioController {
     @PostMapping("/cadastra")
     public Usuario cadastra(@RequestBody Usuario user){
         return this.usuarioService.salvar(user);
+    }
+
+    @GetMapping("/encontrar-por")
+    public Usuario pesquisaUsuariosPorNome(@RequestParam String nome) {
+        return this.usuarioService.encontrarPorNome(nome);
     }
 }

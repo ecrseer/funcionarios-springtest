@@ -6,3 +6,9 @@ Content-Type: application/json
   "nome": "Dana",
   "email": "sem@ba"
 }
+
+### por nome
+GET http://localhost:8042/usuarios/encontrar-por?nome=ana
+
+
+
