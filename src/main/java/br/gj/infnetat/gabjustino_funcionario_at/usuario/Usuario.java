@@ -9,12 +9,40 @@ public class Usuario {
     @Id
     private String id;
     private String nome;
+    private String senha;
     private String email;
+    private String papel;
 
-    public Usuario(String id, String nome, String email) {
+
+    public Usuario(String id, String nome, String senha, String email) {
         this.id = id;
         this.nome = nome;
+        this.senha = senha;
         this.email = email;
+    }
+
+    public Usuario(String id, String nome, String senha, String email, String papel) {
+        this.id = id;
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+        this.papel = papel;
+    }
+
+    public String getPapel() {
+        return papel;
+    }
+
+    public void setPapel(String papel) {
+        this.papel = papel;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getId() {
