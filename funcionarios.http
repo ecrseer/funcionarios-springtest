@@ -1,8 +1,8 @@
 ### POST
-POST http://localhost:8042/usuarios/cadastra
+POST http://localhost:8042/funcionarios
 Content-Type: application/json
 
 {
-  "nome": "Dana",
+  "nome": "ana",
   "email": "sem@ba"
 }
