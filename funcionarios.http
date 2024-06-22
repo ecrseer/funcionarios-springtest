@@ -7,3 +7,7 @@ Content-Type: application/json
   "nome": "Gaba",
   "email": "sem@ba"
 }
+
+### listar
+GET http://localhost:8042/funcionarios
+Authorization: Basic Z2Ficmk6MTIz

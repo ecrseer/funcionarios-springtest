@@ -1,5 +1,6 @@
 package br.gj.infnetat.gabjustino_funcionario_at.funcionario;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,9 @@ public class FuncionarioController {
 
     @PostMapping
     public ResponseEntity<Funcionario> save(@RequestBody Funcionario funcionario) {
+        if (funcionario.getNome() == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(funcionario);
+        }
         Funcionario salvo = this.funcionarioService.salvarFuncionario(funcionario);
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(salvo);
     }
