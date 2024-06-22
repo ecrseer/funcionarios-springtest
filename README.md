@@ -1,4 +1,4 @@
-# Projeto API
+# API de Funcionários
 
 Este projeto é uma aplicação Spring Boot para Assessment que fornece uma API com as seguintes
 entidades: `Usuario`, `Funcionario` e `Departamentos`.
