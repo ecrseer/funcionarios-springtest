@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ### por nome
-GET http://localhost:8042/usuarios/encontrar-por?nome=ana
+GET http://localhost:8042/private/usuarios/encontrar-por?nome=ana
 Authorization: Basic Z2Ficmk6MTIz
 
 

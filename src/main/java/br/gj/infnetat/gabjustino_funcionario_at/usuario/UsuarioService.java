@@ -15,6 +15,10 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
+    public List<Usuario> listar() {
+        return usuarioRepository.findAll();
+    }
+
     public Usuario encontrarPorNome(String nome) throws BadRequestException {
         try {
             List<Usuario> encontrados = usuarioRepository.findUsuarioByNome(nome);

@@ -58,8 +58,9 @@ public class SecurityConfig {
                             try {
                                 auth
                                         .requestMatchers("/h2-console/**").permitAll()
-                                        .requestMatchers("/funcionarios").hasRole("ADMIN")
-                                        .requestMatchers("/usuarios/**").hasRole("ADMIN")
+                                        .requestMatchers("/funcionarios/**").permitAll()
+                                        .requestMatchers("/departamentos/**").permitAll()
+                                        .requestMatchers("/usuarios/**").permitAll()
                                         .anyRequest().authenticated().and().headers().frameOptions().sameOrigin();
                             } catch (Exception e) {
                                 throw new RuntimeException(e);
