@@ -1,6 +1,7 @@
 package br.gj.infnetat.gabjustino_funcionario_at.usuario;
 
 
+import org.apache.coyote.BadRequestException;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -20,7 +21,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/encontrar-por")
-    public Usuario pesquisaUsuariosPorNome(@RequestParam String nome) {
+    public Usuario pesquisaUsuariosPorNome(@RequestParam String nome) throws BadRequestException {
         return this.usuarioService.encontrarPorNome(nome);
     }
 }

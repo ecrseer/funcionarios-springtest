@@ -1,8 +1,9 @@
 ### POST
 POST http://localhost:8042/funcionarios
+Authorization: Basic Z2Ficmk6MTIz
 Content-Type: application/json
 
 {
-  "nome": "ana",
+  "nome": "Gaba",
   "email": "sem@ba"
 }

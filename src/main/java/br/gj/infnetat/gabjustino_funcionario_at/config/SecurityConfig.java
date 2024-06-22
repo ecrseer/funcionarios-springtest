@@ -54,10 +54,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(
-                        auth -> auth
-                                .requestMatchers("/funcionarios").hasRole("ADMIN")
-                                .requestMatchers("/usuarios/**").hasRole("ADMIN")
-                                .anyRequest().authenticated()
+                        auth -> {
+                            try {
+                                auth
+                                        .requestMatchers("/h2-console/**").permitAll()
+                                        .requestMatchers("/funcionarios").hasRole("ADMIN")
+                                        .requestMatchers("/usuarios/**").hasRole("ADMIN")
+                                        .anyRequest().authenticated().and().headers().frameOptions().sameOrigin();
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
                 ).httpBasic(Customizer.withDefaults())
                 .formLogin(form -> form.permitAll())
                 .logout(logout -> logout.permitAll());

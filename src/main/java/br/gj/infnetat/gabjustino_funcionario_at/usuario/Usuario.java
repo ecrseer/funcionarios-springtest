@@ -13,6 +13,8 @@ public class Usuario {
     private String email;
     private String papel;
 
+    public Usuario() {
+    }
 
     public Usuario(String id, String nome, String senha, String email) {
         this.id = id;
