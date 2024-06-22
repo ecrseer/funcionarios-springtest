@@ -3,7 +3,8 @@ POST http://localhost:8042/usuarios/cadastra
 Content-Type: application/json
 
 {
-  "nome": "Dana",
+  "nome": "dabri",
+  "senha": "123",
   "email": "sem@ba"
 }
 
