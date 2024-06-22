@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "75d93224-3ae8-4c9c-9190-d6cd211fadc3",
+    "name": "funcspringsecurity",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "36483172"
+  },
+  "item": [
+    {
+      "name": "funcionario",
+      "item": [
+        {
+          "name": "Recuperar funcionarios",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Adiciona funcionario",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "123",
+                "username": "gabri"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Gabri\",\n  \"email\": \"sem@ba\" \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8042/funcionarios"
+          },
+          "response": []
+        },
+        {
+          "name": "Altera funcionario",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 3,\n  \"nome\": \"Rafha\",\n  \"email\": \"sem@gmail.com\"  \n   \n   \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8042/funcionarios"
+          },
+          "response": []
+        },
+        {
+          "name": "Remove funcionario",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "departamento",
+      "item": [
+        {
+          "name": "Recupera todos",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Salvar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"Desenvolvimento\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://localhost:8042/departamentos"
+          },
+          "response": []
+        },
+        {
+          "name": "Editar",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Deletar",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "usuarios",
+      "item": [
+        {
+          "name": "Recupera todos",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastra",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
